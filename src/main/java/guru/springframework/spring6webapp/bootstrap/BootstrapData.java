@@ -36,6 +36,7 @@ public class BootstrapData implements CommandLineRunner {
 
 
         Author teppoSaved = authorRepository.save(teppo);
+        Book tepposBookSaved = bookRepository.save(tepposBook);
 
 
         Author jaakkoSaved = authorRepository.save(jaakko);
@@ -44,7 +45,7 @@ public class BootstrapData implements CommandLineRunner {
         jaakko.getBooks().add(sinuheSaved);
         sinuhe.getAuthors().add(jaakkoSaved);
 
-        teppo.getBooks().add(tepposBook);
+        teppo.getBooks().add(tepposBookSaved);
         tepposBook.getAuthors().add(teppoSaved);
 
         authorRepository.save(jaakko);
